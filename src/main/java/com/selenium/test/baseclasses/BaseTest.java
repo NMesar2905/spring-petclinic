@@ -1,8 +1,13 @@
 package com.selenium.test.baseclasses;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -11,6 +16,7 @@ import org.testng.annotations.AfterMethod;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.selenium.test.utilities.DateUtils;
 import com.selenium.test.utilities.ExtentReportManager;
 
 
@@ -87,6 +93,23 @@ public class BaseTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public void takeScreenShot() {
+		TakesScreenshot takeScreenshot = (TakesScreenshot) driver;
+		File sourceFile = takeScreenshot.getScreenshotAs(OutputType.FILE);
+
+		String fileName = DateUtils.getTimeStamp() + ".png";
+		File destFile = new File(System.getProperty("user.dir") + "/ScreenShots/" + fileName);
+		try {
+			FileUtils.copyFile(sourceFile, destFile);
+			logger.addScreenCaptureFromPath(System.getProperty("user.dir") + "/ScreenShots/" + fileName);
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 
 }

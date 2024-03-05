@@ -33,5 +33,14 @@ public class FindOwnersPage extends BasePage {
 		lastNameTextBox.sendKeys(lastName);
 		logger.log(Status.PASS, "Entered the lastname : " + lastName);
 	}
+	
+	public AddOwnersPage addOwner() {
+		logger.log(Status.INFO, "Clicking Add Owner Button" );
+		addOwnerBtn.click();
+		logger.log(Status.PASS, "Clicked Add Owner Button" );
+		AddOwnersPage addOwnersPage = new AddOwnersPage(driver, logger);
+		PageFactory.initElements(driver, addOwnersPage);
+		return addOwnersPage;
+	}
 
 }

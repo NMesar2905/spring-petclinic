@@ -18,5 +18,9 @@ public class HomePage extends BasePage{
 		topMenu = new TopMenuClass(driver, logger);
 		PageFactory.initElements(driver, topMenu);
 	}
+	
+	public TopMenuClass gettopMenu() {
+		return topMenu;
+	}
 
 }

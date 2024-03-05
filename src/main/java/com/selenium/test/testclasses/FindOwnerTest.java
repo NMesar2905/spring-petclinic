@@ -24,6 +24,7 @@ public class FindOwnerTest extends BaseTest{
 		BasePage pageBase = new BasePage(driver, logger);
 		PageFactory.initElements(driver, pageBase);
 		homePage = pageBase.openApplication();
+		topMenu = homePage.gettopMenu();
 		findOwnersPage = topMenu.clickFindOwnersBtn();
 		findOwnersPage.enterOwnerLastName("Mesa");
 	}
