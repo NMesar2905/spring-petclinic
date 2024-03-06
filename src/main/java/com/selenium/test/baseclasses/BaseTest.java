@@ -19,12 +19,12 @@ import com.aventstack.extentreports.ExtentTest;
 import com.selenium.test.utilities.DateUtils;
 import com.selenium.test.utilities.ExtentReportManager;
 
-
-
 public class BaseTest {
-	
+
 	public WebDriver driver;
+
 	public ExtentReports report = ExtentReportManager.getReportInstance();
+
 	public ExtentTest logger;
 
 	/****************** Invoke Browser ***********************/
@@ -35,17 +35,20 @@ public class BaseTest {
 				System.setProperty("webdriver.chrome.driver",
 						System.getProperty("user.dir") + "//src//test//resources//drivers//chromedriver.exe");
 				driver = new ChromeDriver();
-			} else if (browserName.equalsIgnoreCase("Mozilla")) {
+			}
+			else if (browserName.equalsIgnoreCase("Mozilla")) {
 				System.setProperty("webdriver.gecko.driver",
 						System.getProperty("user.dir") + "//src//test//resources//drivers//geckodriver.exe");
 				driver = new FirefoxDriver();
-			} else {
+			}
+			else {
 				System.setProperty("webdriver.msedge.driver",
 						System.getProperty("user.dir") + "//src//test//resources//drivers//msedgedriver.exe");
 				driver = new EdgeDriver();
 			}
-		} catch (Exception e) {
-			//reportFail(e.getMessage());
+		}
+		catch (Exception e) {
+			// reportFail(e.getMessage());
 			System.out.println(e.getMessage());
 		}
 
@@ -59,7 +62,7 @@ public class BaseTest {
 		report.flush();
 		driver.close();
 	}
-	
+
 	public void waitForPageLoad() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -68,7 +71,8 @@ public class BaseTest {
 			String pageState = (String) js.executeScript("return document.readyState;");
 			if (pageState.equals("complete")) {
 				break;
-			} else {
+			}
+			else {
 				waitLoad(1);
 			}
 		}
@@ -80,7 +84,8 @@ public class BaseTest {
 			Boolean jsState = (Boolean) js.executeScript("return window.jQuery != undefined && jQuery.active == 0;");
 			if (jsState) {
 				break;
-			} else {
+			}
+			else {
 				waitLoad(1);
 			}
 		}
@@ -89,12 +94,13 @@ public class BaseTest {
 	public void waitLoad(int i) {
 		try {
 			Thread.sleep(i * 1000);
-		} catch (InterruptedException e) {
+		}
+		catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void takeScreenShot() {
 		TakesScreenshot takeScreenshot = (TakesScreenshot) driver;
 		File sourceFile = takeScreenshot.getScreenshotAs(OutputType.FILE);
@@ -105,8 +111,8 @@ public class BaseTest {
 			FileUtils.copyFile(sourceFile, destFile);
 			logger.addScreenCaptureFromPath(System.getProperty("user.dir") + "/ScreenShots/" + fileName);
 
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		}
+		catch (IOException e) {
 			e.printStackTrace();
 		}
 

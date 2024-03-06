@@ -7,10 +7,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.selenium.test.baseclasses.BasePage;
 import com.selenium.test.baseclasses.TopMenuClass;
 
+public class HomePage extends BasePage {
 
-
-public class HomePage extends BasePage{
-	
 	public TopMenuClass topMenu;
 
 	public HomePage(WebDriver driver, ExtentTest logger) {
@@ -18,7 +16,7 @@ public class HomePage extends BasePage{
 		topMenu = new TopMenuClass(driver, logger);
 		PageFactory.initElements(driver, topMenu);
 	}
-	
+
 	public TopMenuClass gettopMenu() {
 		return topMenu;
 	}

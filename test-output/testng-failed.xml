@@ -5,7 +5,7 @@
     <classes>
       <class name="com.selenium.test.testclasses.OwnersTests">
         <methods>
-          <include name="createOwnerVerifyTelephoneTest"/>
+          <include name="getOwnerInfoTest"/>
           <include name="flushReports"/>
         </methods>
       </class> <!-- com.selenium.test.testclasses.OwnersTests -->

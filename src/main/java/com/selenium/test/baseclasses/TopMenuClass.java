@@ -1,6 +1,5 @@
 package com.selenium.test.baseclasses;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,23 +11,21 @@ import com.selenium.test.pageclasses.FindOwnersPage;
 import com.selenium.test.pageclasses.HomePage;
 import com.selenium.test.pageclasses.VeterinariansPage;
 
-
-public class TopMenuClass extends BasePage{
-	
+public class TopMenuClass extends BasePage {
 
 	public TopMenuClass(WebDriver driver, ExtentTest logger) {
 		super(driver, logger);
 	}
-	
+
 	@FindBy(xpath = "//a[@title='home page']")
 	public WebElement homeBtn;
-	
+
 	@FindBy(xpath = "//a[@title='find owners']")
 	public WebElement findOwnersBtn;
-	
+
 	@FindBy(xpath = "//a[@title='veterinarians']")
 	public WebElement veterinariansBtn;
-	
+
 	public HomePage clickHomeBtn() {
 		logger.log(Status.INFO, "Clicking the Home Button");
 		homeBtn.click();
@@ -37,7 +34,7 @@ public class TopMenuClass extends BasePage{
 		PageFactory.initElements(driver, homePage);
 		return homePage;
 	}
-	
+
 	public FindOwnersPage clickFindOwnersBtn() {
 		logger.log(Status.INFO, "Clicking the Find Owners Button");
 		findOwnersBtn.click();
@@ -46,7 +43,7 @@ public class TopMenuClass extends BasePage{
 		PageFactory.initElements(driver, findOwnersPage);
 		return findOwnersPage;
 	}
-	
+
 	public VeterinariansPage clickVeterinariansBtn() {
 		logger.log(Status.INFO, "Clicking the Veterinarians Button");
 		veterinariansBtn.click();

@@ -7,8 +7,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.selenium.test.baseclasses.BasePage;
 import com.selenium.test.baseclasses.TopMenuClass;
 
-public class VeterinariansPage extends BasePage{
-	
+public class VeterinariansPage extends BasePage {
+
 	public TopMenuClass topMenu;
 
 	public VeterinariansPage(WebDriver driver, ExtentTest logger) {

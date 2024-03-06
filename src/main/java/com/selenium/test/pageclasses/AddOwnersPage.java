@@ -70,7 +70,8 @@ public class AddOwnersPage extends BasePage {
 			logger.log(Status.INFO, "Clicking Add Owner Button");
 			addOwnerBtn.click();
 			logger.log(Status.PASS, "Clicked Add Owner Button");
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 			reportFail(e.getMessage());
 		}
 
@@ -100,7 +101,8 @@ public class AddOwnersPage extends BasePage {
 				logger.log(Status.INFO, "Clicking Add Owner Button");
 				addOwnerBtn.click();
 				logger.log(Status.PASS, "Clicked Add Owner Button");
-			} catch (Exception e) {
+			}
+			catch (Exception e) {
 				reportFail(e.getMessage());
 			}
 		}
@@ -113,7 +115,8 @@ public class AddOwnersPage extends BasePage {
 		try {
 			Assert.assertTrue(errorFirstName.isDisplayed());
 			logger.log(Status.PASS, "The error Name message is displayed");
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 			reportFail(e.getMessage());
 		}
 	}
@@ -122,7 +125,8 @@ public class AddOwnersPage extends BasePage {
 		try {
 			Assert.assertTrue(errorTelephone.isDisplayed());
 			logger.log(Status.PASS, "The error Telephone message is displayed");
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 			reportFail(e.getMessage());
 		}
 	}

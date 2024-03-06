@@ -40,7 +40,8 @@ public class BasePage extends BaseTest {
 		try {
 			Assert.assertEquals(driver.getTitle(), expectedTitle);
 			reportPass("Actual Title : " + driver.getTitle() + " - equals to Expected Title : " + expectedTitle);
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 			reportFail(e.getMessage());
 		}
 
@@ -51,11 +52,13 @@ public class BasePage extends BaseTest {
 		try {
 			if (webElement.isDisplayed()) {
 				reportPass("Password Box is Displayed");
-			} else {
+			}
+			else {
 				reportFail("Password box is not appeared");
 			}
 
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 			reportFail(e.getMessage());
 		}
 
@@ -83,7 +86,8 @@ public class BasePage extends BaseTest {
 			FileUtils.copyFile(sourceFile, destFile);
 			logger.addScreenCaptureFromPath(System.getProperty("user.dir") + "/ScreenShots/" + fileName);
 
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
