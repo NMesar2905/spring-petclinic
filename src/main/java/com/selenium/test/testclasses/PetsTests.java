@@ -48,8 +48,8 @@ public class PetsTests extends BaseTest {
 		listOwnersPage = listOwnersPage.exploreAllPageOwners();
 		ownerInfoPage = listOwnersPage.getOwnerInfo();
 		addNewPetPage = ownerInfoPage.clickAddNewPetBtn();
-		
-
+		ownerInfoPage = addNewPetPage.createNewPet("Coffee", "01/01/2022", "cat");
+		ownerInfoPage.checkSuccessMessage();
 		takeScreenShot();
 	}
 

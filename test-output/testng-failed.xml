@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.test.testclasses.OwnersTests">
+      <class name="com.selenium.test.testclasses.PetsTests">
         <methods>
-          <include name="getOwnerInfoTest"/>
+          <include name="createNewPetTest"/>
           <include name="flushReports"/>
         </methods>
-      </class> <!-- com.selenium.test.testclasses.OwnersTests -->
+      </class> <!-- com.selenium.test.testclasses.PetsTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
