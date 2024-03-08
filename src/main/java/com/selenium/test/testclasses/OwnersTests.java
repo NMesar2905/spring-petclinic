@@ -31,9 +31,9 @@ public class OwnersTests extends BaseTest {
 
 	EditOwnerPage editOwnerPage;
 
-	// @Test
+	@Test(priority = 0)
 	public void createOwnerTest() {
-		logger = report.createTest("[TC-01] : Create Owner");
+		logger = report.createTest("[TC-01] : Create Owner").assignCategory("Owner-Test");
 		invokeBrowser("Chrome");
 		BasePage pageBase = new BasePage(driver, logger);
 		PageFactory.initElements(driver, pageBase);
@@ -47,9 +47,9 @@ public class OwnersTests extends BaseTest {
 		takeScreenShot();
 	}
 
-	// @Test
+	@Test(priority = 1)
 	public void findAllOwnersTest() {
-		logger = report.createTest("[TC-02] : Find All Owners");
+		logger = report.createTest("[TC-02] : Find All Owners").assignCategory("Owner-Test");
 		invokeBrowser("Chrome");
 		BasePage pageBase = new BasePage(driver, logger);
 		PageFactory.initElements(driver, pageBase);
@@ -58,12 +58,12 @@ public class OwnersTests extends BaseTest {
 		findOwnersPage = topMenu.clickFindOwnersBtn();
 		listOwnersPage = findOwnersPage.clickFindOwnerBtn();
 		listOwnersPage.checkTitleListOwners("Owners");
-		listOwnersPage = listOwnersPage.exploreAllPageOwners();
+		listOwnersPage.exploreAllPageOwners();
 	}
 
-	// @Test
+	@Test(priority = 2)
 	public void searchOwnerByLastNameTest() {
-		logger = report.createTest("[TC-03] : Search Owner by Lastname");
+		logger = report.createTest("[TC-03] : Search Owner by Lastname").assignCategory("Owner-Test");
 		invokeBrowser("Chrome");
 		BasePage pageBase = new BasePage(driver, logger);
 		PageFactory.initElements(driver, pageBase);
@@ -76,9 +76,9 @@ public class OwnersTests extends BaseTest {
 		takeScreenShot();
 	}
 
-	// @Test
+	@Test(priority = 3)
 	public void getOwnerInfoTest() {
-		logger = report.createTest("[TC-04] : Get Owner Info");
+		logger = report.createTest("[TC-04] : Get Owner Info").assignCategory("Owner-Test");
 		invokeBrowser("Chrome");
 		BasePage pageBase = new BasePage(driver, logger);
 		PageFactory.initElements(driver, pageBase);
@@ -87,15 +87,15 @@ public class OwnersTests extends BaseTest {
 		findOwnersPage = topMenu.clickFindOwnersBtn();
 		listOwnersPage = findOwnersPage.clickFindOwnerBtn();
 		listOwnersPage.checkTitleListOwners("Owners");
-		listOwnersPage = listOwnersPage.exploreAllPageOwners();
+		listOwnersPage.exploreAllPageOwners();
 		ownerInfoPage = listOwnersPage.getOwnerInfo();
 		ownerInfoPage.checkOwnerInformationTitle();
 		takeScreenShot();
 	}
 
-	// @Test
+	@Test(priority = 4)
 	public void updateOwnerTest() {
-		logger = report.createTest("[TC-05] : Update owner");
+		logger = report.createTest("[TC-05] : Update owner").assignCategory("Owner-Test");
 		invokeBrowser("Chrome");
 		BasePage pageBase = new BasePage(driver, logger);
 		PageFactory.initElements(driver, pageBase);
@@ -104,7 +104,7 @@ public class OwnersTests extends BaseTest {
 		findOwnersPage = topMenu.clickFindOwnersBtn();
 		listOwnersPage = findOwnersPage.clickFindOwnerBtn();
 		listOwnersPage.checkTitleListOwners("Owners");
-		listOwnersPage = listOwnersPage.exploreAllPageOwners();
+		listOwnersPage.exploreAllPageOwners();
 		ownerInfoPage = listOwnersPage.getOwnerInfo();
 		editOwnerPage = ownerInfoPage.clickUpdateOwnerBtn();
 		ownerInfoPage = editOwnerPage.modifyOwnerInfo("Natalia", "Mejia", null, null, null);
@@ -112,9 +112,9 @@ public class OwnersTests extends BaseTest {
 		takeScreenShot();
 	}
 
-	// @Test
+	@Test(priority = 5)
 	public void createOwnerVerifyTelephoneTest() {
-		logger = report.createTest("[TC-09] : Add Owner: Verify Telephone");
+		logger = report.createTest("[TC-09] : Add Owner: Verify Telephone").assignCategory("Owner-Test");
 		invokeBrowser("Chrome");
 		BasePage pageBase = new BasePage(driver, logger);
 		PageFactory.initElements(driver, pageBase);
@@ -128,9 +128,9 @@ public class OwnersTests extends BaseTest {
 		takeScreenShot();
 	}
 
-	// @Test
+	@Test(priority = 6)
 	public void createOwnerFirstNameEmptyTest() {
-		logger = report.createTest("[TC-10] : Add Owner: First Name Empty");
+		logger = report.createTest("[TC-10] : Add Owner: First Name Empty").assignCategory("Owner-Test");
 		invokeBrowser("Chrome");
 		BasePage pageBase = new BasePage(driver, logger);
 		PageFactory.initElements(driver, pageBase);
@@ -144,9 +144,9 @@ public class OwnersTests extends BaseTest {
 		takeScreenShot();
 	}
 
-	// @Test
+	@Test(priority = 7)
 	public void findOwnersNonExistentTest() {
-		logger = report.createTest("[TC-14] : Find Owners: Non-existent Lastname");
+		logger = report.createTest("[TC-14] : Find Owners: Non-existent Lastname").assignCategory("Owner-Test");
 		invokeBrowser("Chrome");
 		BasePage pageBase = new BasePage(driver, logger);
 		PageFactory.initElements(driver, pageBase);
@@ -157,9 +157,9 @@ public class OwnersTests extends BaseTest {
 		takeScreenShot();
 	}
 
-	// @Test
+	@Test(priority = 8)
 	public void findOwnersExactLastNameTest() {
-		logger = report.createTest("[TC-15] : Find Owners: Exact Lastname");
+		logger = report.createTest("[TC-15] : Find Owners: Exact Lastname").assignCategory("Owner-Test");
 		invokeBrowser("Chrome");
 		BasePage pageBase = new BasePage(driver, logger);
 		PageFactory.initElements(driver, pageBase);

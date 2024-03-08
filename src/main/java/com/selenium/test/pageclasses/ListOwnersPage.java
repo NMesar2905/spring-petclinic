@@ -42,18 +42,37 @@ public class ListOwnersPage extends BasePage {
 	@FindBy(xpath = "//*[@id=\"owners\"]")
 	public WebElement ownerTable;
 
-	public ListOwnersPage exploreAllPageOwners() {
+	public void exploreAllPageOwners() {
 
-		do {
+		List<WebElement> pagesTag = driver.findElements(By.xpath("//div/span"));
+		for (int i = 0; i < pagesTag.size() - 7; i++) {
 			logger.log(Status.INFO, "Clicking Next Button");
 			nextBtn.click();
 			logger.log(Status.PASS, "Clicked Next Button");
-			ListOwnersPage listOwnersPage = new ListOwnersPage(driver, logger);
-			PageFactory.initElements(driver, listOwnersPage);
 			waitLoad(2);
-			return listOwnersPage;
 		}
-		while (nextBtn.isEnabled());
+		// do {
+		//
+		// logger.log(Status.INFO, "Clicking Next Button");
+		// nextBtn.click();
+		// logger.log(Status.PASS, "Clicked Next Button");
+		//// ListOwnersPage listOwnersPage = new ListOwnersPage(driver, logger);
+		//// PageFactory.initElements(driver, listOwnersPage);
+		// waitLoad(2);
+		// nextBtn = driver.findElement(By.xpath("//a[@title='Next']"));
+		//// return listOwnersPage;
+		// } while (nextBtn.isDisplayed());
+
+		// while (nextBtn.isEnabled()) {
+		// logger.log(Status.INFO, "Clicking Next Button");
+		// nextBtn.click();
+		// logger.log(Status.PASS, "Clicked Next Button");
+		//// ListOwnersPage listOwnersPage = new ListOwnersPage(driver, logger);
+		// PageFactory.initElements(driver, ListOwnersPage.class);
+		// waitLoad(2);
+		// nextBtn = driver.findElement(By.xpath("//a[@title='Next']"));
+		//// return listOwnersPage;
+		// }
 
 	}
 

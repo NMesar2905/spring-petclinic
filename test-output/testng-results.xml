@@ -1,21 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-07T16:26:57 COT" name="Default suite" finished-at="2024-03-07T16:27:03 COT" duration-ms="6574">
+  <suite started-at="2024-03-08T16:21:02 COT" name="Suite" finished-at="2024-03-08T16:22:54 COT" duration-ms="111581">
     <groups>
     </groups>
-    <test started-at="2024-03-07T16:26:57 COT" name="Default test" finished-at="2024-03-07T16:27:03 COT" duration-ms="6574">
+    <test started-at="2024-03-08T16:21:02 COT" name="Test" finished-at="2024-03-08T16:22:54 COT" duration-ms="111581">
+      <class name="com.selenium.test.testclasses.OwnersTests">
+        <test-method signature="createOwnerTest()[pri:0, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:02 COT" name="createOwnerTest" finished-at="2024-03-08T16:21:06 COT" duration-ms="3523" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOwnerTest -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:06 COT" name="flushReports" finished-at="2024-03-08T16:21:06 COT" duration-ms="499" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+        <test-method signature="findAllOwnersTest()[pri:1, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:06 COT" name="findAllOwnersTest" finished-at="2024-03-08T16:21:14 COT" duration-ms="8339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findAllOwnersTest -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:14 COT" name="flushReports" finished-at="2024-03-08T16:21:15 COT" duration-ms="143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+        <test-method signature="searchOwnerByLastNameTest()[pri:2, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:15 COT" name="searchOwnerByLastNameTest" finished-at="2024-03-08T16:21:17 COT" duration-ms="2263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchOwnerByLastNameTest -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:17 COT" name="flushReports" finished-at="2024-03-08T16:21:17 COT" duration-ms="99" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+        <test-method signature="getOwnerInfoTest()[pri:3, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:17 COT" name="getOwnerInfoTest" finished-at="2024-03-08T16:21:25 COT" duration-ms="8499" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getOwnerInfoTest -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:25 COT" name="flushReports" finished-at="2024-03-08T16:21:26 COT" duration-ms="141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+        <test-method signature="updateOwnerTest()[pri:4, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:26 COT" name="updateOwnerTest" finished-at="2024-03-08T16:21:34 COT" duration-ms="8964" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateOwnerTest -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:34 COT" name="flushReports" finished-at="2024-03-08T16:21:35 COT" duration-ms="91" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+        <test-method signature="createOwnerVerifyTelephoneTest()[pri:5, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:35 COT" name="createOwnerVerifyTelephoneTest" finished-at="2024-03-08T16:21:37 COT" duration-ms="2589" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOwnerVerifyTelephoneTest -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:37 COT" name="flushReports" finished-at="2024-03-08T16:21:37 COT" duration-ms="101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+        <test-method signature="createOwnerFirstNameEmptyTest()[pri:6, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:37 COT" name="createOwnerFirstNameEmptyTest" finished-at="2024-03-08T16:21:40 COT" duration-ms="2466" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOwnerFirstNameEmptyTest -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:40 COT" name="flushReports" finished-at="2024-03-08T16:21:40 COT" duration-ms="147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+        <test-method signature="findOwnersNonExistentTest()[pri:7, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:40 COT" name="findOwnersNonExistentTest" finished-at="2024-03-08T16:21:42 COT" duration-ms="2161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findOwnersNonExistentTest -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:42 COT" name="flushReports" finished-at="2024-03-08T16:21:42 COT" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+        <test-method signature="findOwnersExactLastNameTest()[pri:8, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:42 COT" name="findOwnersExactLastNameTest" finished-at="2024-03-08T16:21:44 COT" duration-ms="2250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findOwnersExactLastNameTest -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.OwnersTests@20b12f8a]" started-at="2024-03-08T16:21:44 COT" name="flushReports" finished-at="2024-03-08T16:21:45 COT" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+      </class> <!-- com.selenium.test.testclasses.OwnersTests -->
       <class name="com.selenium.test.testclasses.PetsTests">
-        <test-method signature="createNewPetTest()[pri:0, instance:com.selenium.test.testclasses.PetsTests@5e8ac0e1]" started-at="2024-03-07T16:26:57 COT" name="createNewPetTest" finished-at="2024-03-07T16:27:03 COT" duration-ms="6161" status="PASS">
+        <test-method signature="createNewPetTest()[pri:0, instance:com.selenium.test.testclasses.PetsTests@6c25e6c4]" started-at="2024-03-08T16:21:45 COT" name="createNewPetTest" finished-at="2024-03-08T16:21:57 COT" duration-ms="12226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewPetTest -->
-        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.PetsTests@5e8ac0e1]" started-at="2024-03-07T16:27:03 COT" name="flushReports" finished-at="2024-03-07T16:27:03 COT" duration-ms="376" status="PASS">
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.PetsTests@6c25e6c4]" started-at="2024-03-08T16:21:57 COT" name="flushReports" finished-at="2024-03-08T16:21:57 COT" duration-ms="137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+        <test-method signature="updatePetTest()[pri:1, instance:com.selenium.test.testclasses.PetsTests@6c25e6c4]" started-at="2024-03-08T16:21:57 COT" name="updatePetTest" finished-at="2024-03-08T16:22:09 COT" duration-ms="11840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatePetTest -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.PetsTests@6c25e6c4]" started-at="2024-03-08T16:22:09 COT" name="flushReports" finished-at="2024-03-08T16:22:09 COT" duration-ms="155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+        <test-method signature="createNewVisit()[pri:2, instance:com.selenium.test.testclasses.PetsTests@6c25e6c4]" started-at="2024-03-08T16:22:09 COT" name="createNewVisit" finished-at="2024-03-08T16:22:18 COT" duration-ms="9099" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewVisit -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.PetsTests@6c25e6c4]" started-at="2024-03-08T16:22:18 COT" name="flushReports" finished-at="2024-03-08T16:22:18 COT" duration-ms="156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+        <test-method signature="petEmptyNameTest()[pri:3, instance:com.selenium.test.testclasses.PetsTests@6c25e6c4]" started-at="2024-03-08T16:22:18 COT" name="petEmptyNameTest" finished-at="2024-03-08T16:22:29 COT" duration-ms="10690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- petEmptyNameTest -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.PetsTests@6c25e6c4]" started-at="2024-03-08T16:22:29 COT" name="flushReports" finished-at="2024-03-08T16:22:29 COT" duration-ms="119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+        <test-method signature="petSelectBirthDateUITest()[pri:4, instance:com.selenium.test.testclasses.PetsTests@6c25e6c4]" started-at="2024-03-08T16:22:29 COT" name="petSelectBirthDateUITest" finished-at="2024-03-08T16:22:42 COT" duration-ms="13118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- petSelectBirthDateUITest -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.PetsTests@6c25e6c4]" started-at="2024-03-08T16:22:42 COT" name="flushReports" finished-at="2024-03-08T16:22:42 COT" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReports -->
+        <test-method signature="createPetAlreadyCreatedTest()[pri:5, instance:com.selenium.test.testclasses.PetsTests@6c25e6c4]" started-at="2024-03-08T16:22:42 COT" name="createPetAlreadyCreatedTest" finished-at="2024-03-08T16:22:53 COT" duration-ms="11205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPetAlreadyCreatedTest -->
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.selenium.test.testclasses.PetsTests@6c25e6c4]" started-at="2024-03-08T16:22:53 COT" name="flushReports" finished-at="2024-03-08T16:22:54 COT" duration-ms="126" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReports -->
       </class> <!-- com.selenium.test.testclasses.PetsTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

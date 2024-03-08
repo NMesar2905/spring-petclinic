@@ -4,8 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Year;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Keys;
@@ -99,20 +101,20 @@ public class BasePage extends BaseTest {
 		}
 
 	}
-	
+
 	/*************** Set a Date ****************/
 	public void clickDataPicker(WebElement webElement, String birthDate) {
 		try {
+
 			int currentYear = Year.now().getValue();
 			SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-			webElement.click();
 
 			Date expectedDate = dateFormat.parse(birthDate);
 			Calendar calendar = Calendar.getInstance();
 			calendar.setTime(expectedDate);
 
 			int day = calendar.get(Calendar.DAY_OF_MONTH);
-			int month = calendar.get(Calendar.MONTH);
+			int month = calendar.get(Calendar.MONTH) + 1;
 			int year = calendar.get(Calendar.YEAR);
 
 			// Select Day
@@ -122,18 +124,18 @@ public class BasePage extends BaseTest {
 					break;
 				}
 			}
-			webElement.sendKeys(Keys.ARROW_RIGHT);
 
 			// Select Month
+			webElement.sendKeys(Keys.ARROW_RIGHT);
 			for (int i = 1; i <= 12; i++) {
 				webElement.sendKeys(Keys.ARROW_UP);
 				if (i == month) {
 					break;
 				}
 			}
-			webElement.sendKeys(Keys.ARROW_RIGHT);
 
 			// Select Year
+			webElement.sendKeys(Keys.ARROW_RIGHT);
 			webElement.sendKeys(Keys.ARROW_UP);
 			int diffYears = currentYear - year;
 			if (currentYear != year) {
@@ -142,20 +144,60 @@ public class BasePage extends BaseTest {
 				}
 			}
 
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 			reportFail(e.getMessage());
 		}
 
 	}
-	
+
+	/*************** Set a Date with GUID ****************/
+	public void clickDataPickerUI(WebElement webElement, String birthDate) {
+		try {
+
+			Date currentDate = new Date();
+			SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+			Date expectedDate = dateFormat.parse(birthDate);
+
+			long diffMiliSeconds = currentDate.getTime() - expectedDate.getTime();
+			long diffDays = TimeUnit.MILLISECONDS.toDays(diffMiliSeconds);
+
+			webElement.clear();
+			webElement.sendKeys(Keys.SPACE);
+			int i = 0;
+			do {
+				if (diffDays > 0) {
+					webElement.sendKeys(Keys.ARROW_LEFT);
+				}
+				if (diffDays < 0) {
+					webElement.sendKeys(Keys.ARROW_RIGHT);
+				}
+				i++;
+			}
+			while (i != Math.abs(diffDays));
+
+		}
+		catch (Exception e) {
+			reportFail(e.getMessage());
+		}
+
+	}
+
 	/*************** Select value from drop down ****************/
-	public void selectDropDownValue(WebElement webElement, String value){
+	public void selectDropDownValue(WebElement webElement, String value) {
 		try {
 			Select select = new Select(webElement);
 			select.selectByVisibleText(value);
 			logger.log(Status.PASS, "Selected the Value : " + value);
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 			reportFail(e.getMessage());
 		}
 	}
+
+	/*********** Check if Method parameter have values ************/
+	public boolean haveValues(String parameter) {
+		return parameter != null && !parameter.trim().isEmpty() && parameter.matches(".*[a-zA-Z0-9].*");
+	}
+
 }

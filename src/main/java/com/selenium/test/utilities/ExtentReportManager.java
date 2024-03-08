@@ -14,7 +14,7 @@ public class ExtentReportManager {
 			String reportName = DateUtils.getTimeStamp() + ".html";
 			report = new ExtentReports();
 			ExtentSparkReporter htmlReporter = new ExtentSparkReporter(
-					System.getProperty("user.dir") + "/test-output/" + reportName);
+					System.getProperty("user.dir") + "/test-output/Extent-Reports/" + reportName);
 			htmlReporter.config().setTheme(Theme.STANDARD);
 			htmlReporter.config().setReportName("All Headlines UI Test Report");
 			htmlReporter.config().setDocumentTitle("UAT UI automation Results");

@@ -88,8 +88,4 @@ public class EditOwnerPage extends BasePage {
 
 	}
 
-	private boolean haveValues(String parameter) {
-		return parameter != null && !parameter.trim().isEmpty() && parameter.matches(".*[a-zA-Z].*");
-	}
-
 }
